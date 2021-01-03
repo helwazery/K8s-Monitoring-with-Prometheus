@@ -1,0 +1,6 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+          - name: deploy app 
+            command:
+                    kubectl apply -f k8s-application-config.yml
