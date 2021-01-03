@@ -3,4 +3,4 @@
   tasks:
           - name: deploy app 
             command:
-                    kubectl apply -f k8s-application-config.yml
+                    kubectl apply -f application-config.yml 
