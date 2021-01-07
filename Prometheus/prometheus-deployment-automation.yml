@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+          - name: deploy Prometheus config-map 
+            command:
+                    kubectl apply -f prometheus-config-map.yml
+          - name: Prometheus deployment file
+            command:
+                    kubectl apply -f prometheus-deployment.yml
+          - name: deploy Prometheus service
+            command:
+                    kubectl apply -f prometheus-service.yml
+
