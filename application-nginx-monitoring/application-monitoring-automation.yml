@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+          - name: deploy nginx config-map 
+            command:
+                    kubectl apply -f nginx-config-map.yml
+          - name: Prometheus nginx exporter for prometheus
+            command:
+                    kubectl apply -f nginx-exporter.yml
