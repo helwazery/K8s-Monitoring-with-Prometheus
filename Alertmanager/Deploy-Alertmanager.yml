@@ -1,0 +1,17 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+          - name: deploy Alert 
+            command:
+                    kubectl apply -f Alert-Deployment.yml
+          - name: deploy Alert Service
+            command:
+                    kubectl apply -f Alert-Service.yml
+          - name: deploy AlertTemplate Config-Map
+            command:
+                    kubectl apply -f AlertTemplate-config-map.yml
+          - name: deploy AlertManager Conig-Map
+            command:
+                    kubectl apply -f Alertmanager-config-map.yml
+
+
