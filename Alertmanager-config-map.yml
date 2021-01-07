@@ -13,7 +13,12 @@ data:
       group_by: ['alertname', 'priority']
       group_wait: 10s
       repeat_interval: 30m
- 
+      routes:
+        - receiver: slack-webhook
+          match:
+            severity: slack
+          group:wait: 10s
+          repeat_interval: 1m      
     receivers:
     - name: alert-emailer
       email_configs:
@@ -22,3 +27,7 @@ data:
         from: from-email@email.com
         smarthost: smtp.eample.com:25
         require_tls: false
+    - name: slack-webhook
+      slack_configs:
+      - api_url: https://hooks.slack.com/services/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
+        channel: this-is-for-the-alerts
