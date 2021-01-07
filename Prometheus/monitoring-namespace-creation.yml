@@ -1,0 +1,6 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+          - name: create monitoring namespace
+            command:
+                    kubectl create namespace monitoring
