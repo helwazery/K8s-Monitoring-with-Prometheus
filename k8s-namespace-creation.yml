@@ -1,7 +1,0 @@
----
-- hosts: 127.0.0.1
-  tasks:
-          - name: create k8s namespace 
-            command:
-                    kubectl create namespace k8-namespace
-
