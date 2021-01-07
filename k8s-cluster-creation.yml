@@ -1,9 +1,0 @@
----
-- hosts: 127.0.0.1
-  tasks:
-          - name: create k8s cluster 
-            command:
-                    eksctl create cluster --name k8s
-                    --region eu-central-1 --nodegroup-name workers 
-                    --node-type t2.small --nodes 3 --nodes-min 2 --nodes-max 4
-
